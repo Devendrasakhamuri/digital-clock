@@ -18,7 +18,7 @@ jobs:
     - name: Update index.html with current time
       run: |
         current_time=$(date -u +"%Y-%m-%d %H:%M:%S")
-        sed -i "s|<div id=\"current-time\">.*</div>|<div id=\"current-time\">Time: $current_time</div>|" index.html
+        sed -i "s|<div id=\"current-time\">Time: .*|<div id=\"current-time\">Time: $current_time</div>|" index.html
 
     - name: Commit changes
       run: |
