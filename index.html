@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,7 +33,9 @@
 </head>
 <body>
     <div id="clocks">
+        <!-- Clocks will be added here by JavaScript -->
     </div>
+    <div id="current-time">Time: </div> <!-- Add this line here -->
     <script>
         const timeZones = [
             { name: "UTC", offset: 0 },
@@ -59,6 +60,8 @@
                 clockDiv.innerHTML = `<div class="timezone">${zone.name}</div><div class="time">${hours}:${minutes}:${seconds}</div>`;
                 container.appendChild(clockDiv);
             });
+            // Update the current time in the placeholder
+            document.getElementById('current-time').innerText = `Time: ${now.toUTCString()}`;
         }
 
         setInterval(updateTime, 1000);
@@ -66,6 +69,3 @@
     </script>
 </body>
 </html>
-=======
- 
->>>>>>> 2394421 (Add digital clock implementation)
